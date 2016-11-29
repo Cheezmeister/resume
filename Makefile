@@ -1,10 +1,10 @@
-TARGET=bruno.bronosky.resume.pdf
+TARGET=b_luchen_resume.pdf
 
 # HINT: Run `make clean` if you get "Nothing to be done for `all`."
 all: $(TARGET)
 
-%.pdf: %.tex
-	docker run -i richardbronosky/latex-compiler < $< > $@
+%.pdf: %.tex res.cls
+	tar cf - $< res.cls | docker run -i richardbronosky/latex-compiler > $@
 
 clean:
 	rm -f $(TARGET) $$(cat .gitignore)

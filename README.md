@@ -1,16 +1,13 @@
 ## [Download PDF] [1]
 
-# Bruno Bronosky
-Solution Architect, Mobile — Cox Media Group Technology
+# Brendan Luchen
+
+Full-Stack Engineer. Game Developer. Artist. Aikidoka. Bassist. Baker. Maker.
 
 --------
 
 ## This is my resume. There are many like it, but this one is mine.
-I am a coder. I write code. I coded my [resume in LaTeX] because that is the way I want to maintain it. I have made it available in [PDF form] [1] because it is reliable. Do not ask for it in "Word" format.
+I am a coder. I write code. I coded my [resume in L<span style="text-transform: uppercase; font-size: 70%; margin-left: -0.36em; vertical-align: 0.3em; line-height: 0; margin-right: -0.15em;">a</span>T<span style="text-transform: uppercase; margin-left: -0.1667em; vertical-align: -0.5ex; line-height: 0; margin-right: -0.125em;">e</span>X][LaTeX] because that is the way I want to maintain it. I have made it available in [PDF form] [1] because it is reliable. Do not ask for it in "Word" format.
 
-## This repo is special
-There are many resumes on github. This repo is unique because it is also the source code for the popular [richardbronosky/latex-compiler] Docker image.
-
-[1]: https://github.com/RichardBronosky/resume/raw/master/bruno.bronosky.resume.pdf
-[resume in LaTeX]: https://github.com/RichardBronosky/resume/blob/master/bruno.bronosky.resume.tex
-[richardbronosky/latex-compiler]: https://registry.hub.docker.com/u/richardbronosky/latex-compiler/
+[1]: https://github.com/Cheezmeister/resume/raw/master/b_luchen_resume.pdf
+[LaTeX]: https://github.com/Cheezmeister/resume/blob/master/b_luchen_resume.tex
