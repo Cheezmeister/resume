@@ -10,4 +10,4 @@ clean:
 	rm -f $(TARGET) $$(cat .gitignore)
 
 deploy: $(TARGET)
-	git pull --rebase && git push && scp $(TARGET) $(SERVER):www/bml.rocks/resume/$(TARGET)
+	git pull --rebase && git push --all && scp $(TARGET) $(SERVER):www/bml.rocks/resume/$(TARGET)
