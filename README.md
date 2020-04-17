@@ -11,3 +11,12 @@ I am a coder. I write code. I coded my [resume in L<span style="text-transform: 
 
 [1]: https://github.com/Cheezmeister/resume/raw/master/b_luchen_resume.pdf
 [LaTeX]: https://github.com/Cheezmeister/resume/blob/master/b_luchen_resume.tex
+
+---
+
+
+<embed
+  src="https://github.com/Cheezmeister/resume/raw/master/b_luchen_resume.pdf"
+  width="850"
+  height="1100"
+  type="application/pdf">

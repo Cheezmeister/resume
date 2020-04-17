@@ -4,7 +4,7 @@ TARGET=b_luchen_resume.pdf
 all: $(TARGET)
 
 %.pdf: %.tex res.cls
-	tar cf - $< res.cls | sudo docker run -i richardbronosky/latex-compiler > $@
+	tar cf - $< res.cls | docker run -i richardbronosky/latex-compiler > $@
 
 clean:
 	rm -f $(TARGET) $$(cat .gitignore)
