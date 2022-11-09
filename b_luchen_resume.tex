@@ -11,9 +11,13 @@
 \resumewidth=7.2in
 
 \newcommand{\CS}{C\texttt{\#}}
+\newcommand{\timestamp}{\the\year-\the\month-\the\day\ }
 
 \begin{document}
 \urlstyle{sf}
+
+\hfill Created \timestamp
+\vspace{0.25in}
 
 \name{\huge Brendan Luchen}
 \vspace{-0.25in}
@@ -21,6 +25,14 @@
 \address{\href{http://is.gd/bmlGithub}{\textsl{github.com/Cheezmeister}}}
 
 \begin{resume}
+
+\section{\sc Synopsis}
+Eclectic and motivated frontend engineer with fullstack and devops capabilities.
+With over a decade in the field and the cynicism to prove it, my real value prop is
+an informed holistic view of software as a solution to a problem.
+Employed as an engineer; self-identify as a maker.
+
+I have lived in \href{http://bml.rocks/#where}{a half-dozen US states}, and visited many more.
 
 \section{\sc Skills}
     \begin{tabular}{@{\extracolsep{\fill} }r|lll}
@@ -33,6 +45,8 @@
       \textbf{Tools/Software}         & git, Vim, tmux          & Docker, Heroku      & GIMP, GDB, Ansible \\
       \textbf{Spoken Language}        & & Spanish & Japanese, German
     \end{tabular}
+
+(Not an exhaustive list)
 
 \section{\sc Education}
     \begin{tabularx}
@@ -47,22 +61,60 @@
 
 \section{\sc Shipped Software}
     \textbf{\href{https://is.gd/chromaReview}{\underline{Chromathud}}}: Educational puzzle game for PC and Xbox Live Indie Games \\
-    \textbf{\href{http://ocjb.me}{\underline{OverClocked Jukebox}}}: Web jukebox for videogame arrangements from \texttt{ocremix.org} \\
+    % \textbf{\href{http://ocjb.me}{\underline{OverClocked Jukebox}}}: Web jukebox for videogame arrangements from \texttt{ocremix.org} \\
+    \textbf{\href{https://github.com/Cheezmeister/www.ocjb.me}{\underline{OverClocked Jukebox}}}: Web jukebox for videogame arrangements from \texttt{ocremix.org} \\
     \textbf{Modern Warfare 3}: Multiplatform first-person shooter (\copyright\ Activision) \\
-    \textbf{Haiku for Android}: Thin client to Epic's electronic medical record (\copyright\ Epic)
+    \textbf{Haiku for Android}: Thin client to Epic's electronic medical record (\copyright\ Epic) \\
+    \textbf{Teikametrics Flywheel}: The eCommerce Seller's Operating System (\copyright\ Teikametrics) \\
 
+\newcommand{\footer}{
+  \vfill
+  \textit{Handcrafted with \heartsuit + \LaTeX (\href{https://github.com/Cheezmeister/resume/raw/master/b_luchen_resume.tex}{View\ Source})}.
+  \hfill
+  \textit{This document lives at \textul{\href{http://resume.bml.rocks}{resume.bml.rocks}}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{\sc Career}
     \begin{tabularx}
       \textbf{Teikametrics} & (Current) & \hfill \textbf{Boston, Massachusetts} \\
         \textit{Software Engineer 2} & \hfill February 2019--present \\
     \end{tabularx}
-    \vspace{-0.15in}
+
+    \vspace{-0.25in}
+    % \center{ \textbf{Summary} } \\
+    \hspace{0.5in} Flywheel is an eCommerce seller's toolkit, offering ad-spend optimization, inventory management, market intelligence, and expert management.
+    \hline
+
+
+    % \center{ \textbf{Takeaways} } \\
+    % Teikametrics is a polyglot shop that uses a wide range of tools and platforms to
+    % best solve each small problem. This is an environment that brings me joy.
+    % I've picked up basic competency in the tech listed below, but the most valuable lessons are the nontechnical ones.
+    % Greater fluency in Jira; comfort in building and using peripheral infrastructure (logging,
+    % monitors, alerts, dashboards, documentation); fostering a culture of discipline and ownership.
+
+    % \center{ \textbf{Impact} \\
     \begin{itemize}
-        \item Built MVPs for Walmart ads integration, inventory optimization, and user authentication (via Auth0)
-        \item Championing customer needs and knowledge sharing among developers
-        \item Designing internal tooling to improve developer quality of life
+      \item Delivered an automated billing backend, enabling some \$NNN of MRR to be automatically invoiced and charged, a previously manual process.
+      \item Developed internal tooling to automate routine dev tasks, viz. migration from the old system to the new ("Flywheel 2.0").
+      \item Presented "Lunch and Learns" on topics including on History of Frontend; Phoenix on Elixir; my very unusual workstation.
     \end{itemize}
+
+    \textbf{Technologies} \\
+    SQL (Postgres), Docker, Heroku, Ruby, Rails, React, Typescript, Scala, Cats,
+    TailwindCSS, Python, Bash, Go, Datadog, Terraform, Kubernetes
+
+
+    % \begin{itemize}
+    %     \item Built MVPs for Walmart ads integration, inventory optimization, and user authentication
+    %     \item Champion customer needs and knowledge sharing among developers
+    %     \item Design internal tooling to improve developer quality of life
+    % \end{itemize}
+    % \textbf{Technologies}
+    % \texttt{ Docker Ruby on Rails React on Typescript+JSX Scala Python TailwindCSS }
 
     \begin{tabularx}
         \textbf{Reviewsnap}                       & \hfill \textbf{Seattle, Washington}  \\
@@ -105,5 +157,8 @@
 
 \vfill
 % \hfill \textit{\small References are available upon request.}
-\textit{Handcrafted with \heartsuit + \LaTeX (\href{https://github.com/Cheezmeister/resume/raw/master/b_luchen_resume.tex}{View\ Source})}. \hfill \textit{This document lives at \textul{\href{https://resume.bml.rocks}{resume.bml.rocks}}}
+\textit{Handcrafted with \heartsuit + \LaTeX (\href{https://github.com/Cheezmeister/resume/raw/master/b_luchen_resume.tex}{View\ Source})}.
+\hfill
+\textit{This document lives at \textul{\href{http://resume.bml.rocks}{resume.bml.rocks}}}
+\\
 \end{document}
