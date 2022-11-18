@@ -13,7 +13,44 @@
 \newcommand{\CS}{C\texttt{\#}}
 \newcommand{\timestamp}{\the\year-\the\month-\the\day\ }
 
+\newcommand{\footer}{
+  \vfill
+  \textit{Handcrafted with \heartsuit + \LaTeX (\href{https://github.com/Cheezmeister/resume/raw/master/b_luchen_resume.tex}{View\ Source})}.
+  \hfill
+  \textit{This document lives at \textul{\href{http://resume.bml.rocks}{resume.bml.rocks}}}
+}
+
+\newcommand{\role}[4]{
+  \begin{tabularx}
+    \textbf{#1}   & \hfill \textbf{#2} \\
+    \textit{#3}   & \hfill #4          \\
+  \end{tabularx}
+}
+
+\newcommand{\employerSummary}[1]{
+  % \vspace{-0.25in}
+  % \center{ \textbf{Summary} } \\
+  \begin{small} 
+    #1 
+  \end{small}
+  % \hrulefill
+}
+
+\newcommand{\impact}[1]{
+    % \center{ \textbf{Impact} \\
+    \begin{itemize}
+        #1
+    \end{itemize}
+}
+
+\newcommand{\technologies}[1]{
+    \textbf{Technologies}: #1
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \urlstyle{sf}
 
 \hfill Created \timestamp
@@ -24,17 +61,19 @@
 \address{\texttt{brendan@\href{http://is.gd/bmlBio}{luchenlabs.com}}}
 \address{\href{http://is.gd/bmlGithub}{\textsl{github.com/Cheezmeister}}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{resume}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{\sc Synopsis}
 Eclectic and motivated frontend engineer with fullstack and devops capability. \\
-A decade in the field and the optimistic cynicism to prove it \\
+A decade in the field and the optimistic cynicism to prove it. \\
 An informed holistic view of software's purpose as an \textit{effective} solution to a \textit{real} problem. \\
 Employed as an engineer; self-identify as a maker.
 
 % "real" footnote: https://www.fearlessculture.design/blog-posts/stop-solving-the-wrong-problem
 
-I have lived in \href{http://bml.rocks/#where}{a half-dozen US states}, three countries; and visited many more.
+% I have lived in \href{http://bml.rocks/#where}{a half-dozen US states}, three countries; and visited many more.
 
 \section{\sc Skills}
     \begin{tabular}{@{\extracolsep{\fill} }r|lll}
@@ -69,27 +108,31 @@ I have lived in \href{http://bml.rocks/#where}{a half-dozen US states}, three co
     \textbf{Haiku for Android}: Thin client to Epic's electronic medical record (\copyright\ Epic) \\
     \textbf{Teikametrics Flywheel}: The eCommerce Seller's Operating System (\copyright\ Teikametrics) \\
 
-\newcommand{\footer}{
-  \vfill
-  \textit{Handcrafted with \heartsuit + \LaTeX (\href{https://github.com/Cheezmeister/resume/raw/master/b_luchen_resume.tex}{View\ Source})}.
-  \hfill
-  \textit{This document lives at \textul{\href{http://resume.bml.rocks}{resume.bml.rocks}}}
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\sc \footnotesize Employment}
+  \role
+    {Teikametrics}
+    {Boston, Massachusetts}
+    {Software Engineer II (SE2)}
+    {Feb 2019--present}
+  \employerSummary
+    {Flywheel is an eCommerce seller toolkit, offering ad-spend optimization, inventory management,
+     market intelligence, and premium managed services with in-house analysts.}
+  \impact{
+    \item Delivered an automated billing backend, enabling some \$25k of MRR to be automatically invoiced and charged, a previously manual process.
+    \item Developed internal tooling to automate routine dev tasks, viz. migration from Flywheel 1 to 2.0
+    \item Presented ``Lunch and Learns" on topics including: \\ History of Frontend; Phoenix on Elixir; Brendan's Peculiar Workstation.
+  }
+  \technologies{
+    SQL (Postgres), Docker, Heroku, Ruby, Rails, React, Typescript, Scala, Cats,
+    TailwindCSS, Python, Bash, Go, Datadog, Terraform, Kubernetes
+  }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{\sc Employment}
-    \begin{tabularx}
-      \textbf{Teikametrics} & (Current) & \hfill \textbf{Boston, Massachusetts} \\
-        \textit{Software Engineer 2} & \hfill February 2019--present \\
-    \end{tabularx}
-
-    \vspace{-0.25in}
-    % \center{ \textbf{Summary} } \\
-    \hspace{0.5in} Flywheel is an eCommerce seller toolkit, offering ad-spend optimization, inventory management, market intelligence, and a premium managed offering with in-house analysts.
-    \hline
-
+\section{\sc \footnotesize Past Employment}
 
     % \center{ \textbf{Takeaways} } \\
     % Teikametrics is a polyglot shop that uses a wide range of tools and platforms to
@@ -98,50 +141,34 @@ I have lived in \href{http://bml.rocks/#where}{a half-dozen US states}, three co
     % Greater fluency in Jira; comfort in building and using peripheral infrastructure (logging,
     % monitors, alerts, dashboards, documentation); fostering a culture of discipline and ownership.
 
-    % \center{ \textbf{Impact} \\
-    \begin{itemize}
-      \item Delivered an automated billing backend, enabling some \$25k of MRR to be automatically invoiced and charged, a previously manual process.
-      \item Developed internal tooling to automate routine dev tasks, viz. migration from Flywheel 1 to 2.0
-      \item Presented "Lunch and Learns" on topics including on History of Frontend; Phoenix on Elixir; my very unusual workstation.
-    \end{itemize}
-
-    \textbf{Technologies} \\
-    SQL (Postgres), Docker, Heroku, Ruby, Rails, React, Typescript, Scala, Cats,
-    TailwindCSS, Python, Bash, Go, Datadog, Terraform, Kubernetes
-
-
-    % \begin{itemize}
-    %     \item Built MVPs for Walmart ads integration, inventory optimization, and user authentication
-    %     \item Champion customer needs and knowledge sharing among developers
-    %     \item Design internal tooling to improve developer quality of life
-    % \end{itemize}
-    % \textbf{Technologies}
-    % \texttt{ Docker Ruby on Rails React on Typescript+JSX Scala Python TailwindCSS }
-
-    \begin{tabularx}
-        \textbf{Applied Training Systems}                       & \hfill \textbf{Seattle, Washington}  \\
-        \textit{Software Engineer} & \hfill April 2017--August 2018 \\
-    \end{tabularx}
-    \vspace{-0.15in}
-    \begin{itemize}
+    \role
+      {Applied Training Systems, Inc.}
+      {Seattle, Washington}
+      {Software Engineer}
+      {April 2017--August 2018}
+    \employerSummary
+      {Reviewsnap and Trakstar are mature and well-tuned performance management systems.}
+    \impact{
         \item Pioneered a docker-based development environment to speed up onboarding
-    \end{itemize}
+        \item Reviewed team members' work to ensure a high quality bar
+    }
 
-    \textbf{Technologies} \\
-    Python, Swagger, Docker, Ruby, Rails, React, Sass
+    \technologies{
+      Python, Swagger, Docker, Ruby, Rails, React, Sass
+    }
 
-
-    % thePlatform Comcast Technology Solutions provides custom solutions for digital media companies to manage and publish video and audio.
-    % https://en.wikipedia.org/wiki/ThePlatform
     \begin{tabularx}
         \textbf{Comcast Technology Solutions}        & \hfill \textbf{Seattle, Washington}  \\
         \textit{Software Development Engineer in Test (SDET)} & \hfill August 2014--November 2016 \\
     \end{tabularx}
-    \vspace{-0.15in}
-    \begin{itemize}
-        \item Owned end-to-end testing of commissioned work in "productively adversarial" relation to development
+    \employerSummary
+    {Comcast Technology Solutions (nee ``\href{https://en.wikipedia.org/wiki/ThePlatform}{\textit{thePlatform}}'') designs custom solutions for digital media companies to manage and publish video and audio.
+      }
+    \impact{
+        \item Owned E2E testing of commissioned work in "productively adversarial" relation to development
+        \item Verified code allowing Comcast subscribers on Apple TV to login with their Apple ID
         \item Built an improved CLI and GUI to access the firm's proprietary data backend
-    \end{itemize}
+    }
 
     \textbf{Technologies} \\
     Java, Spring, Node/AngularJS, TestNG, OpenStack, AWS, Chef, Gatling, Upsource, REST, Literate CoffeeScript, Jenkins, TeamCity
