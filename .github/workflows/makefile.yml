@@ -19,4 +19,8 @@ jobs:
       run: make clean
     - name: Build PDF
       run: make
-
+    - name: Store PDF
+      uses: actions/upload-artifact@v3
+      with:
+        name: b_luchen_resume.pdf
+        path: b_luchen_resume.pdf
