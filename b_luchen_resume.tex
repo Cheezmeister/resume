@@ -4,11 +4,14 @@
 \documentclass[line,margin]{res}
 \setlength{\textheight}{9.6in} % increase text height to fit on 1-page
 \linespread{1.2} % If space, stretch out and relax
+\usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage[margin=0.5in]{geometry}
 
 \newsectionwidth{0.8in}
 \resumewidth=7.2in
+
+\definecolor{verylightgray}{gray}{0.95}
 
 \newcommand{\CS}{C\texttt{\#}}
 \newcommand{\timestamp}{\the\year-\the\month-\the\day\ }
@@ -44,7 +47,11 @@
 }
 
 \newcommand{\technologies}[1]{
-    \textbf{Technologies}: #1
+  \fcolorbox{gray}{verylightgray}{\color{black}
+    \begin{minipage}{6.25in}
+        \textbf{Technologies}: #1
+    \end{minipage}
+  }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -87,8 +94,6 @@ Employed as an engineer; self-identify as a maker.
       \textbf{Spoken Language}        & & Spanish & Japanese, German
     \end{tabular}
 
-(Not an exhaustive list)
-
 \section{\sc Education}
     \begin{tabularx}
         \textbf{Rochester Institute of Technology}     &  \hfill Rochester, New York  \\
@@ -114,22 +119,25 @@ Employed as an engineer; self-identify as a maker.
     {Teikametrics}
     {Boston, Massachusetts}
     {Software Engineer II (SE2)}
-    {Feb 2019--Jan 2023}
+    {February 2019--January 2023}
   \employerSummary
     {Flywheel is an eCommerce seller toolkit, offering ad-spend optimization, inventory management,
      market intelligence, and premium managed services with in-house analysts.}
   \impact{
     \item Delivered an automated billing backend, enabling some \$25k of MRR to be automatically invoiced and charged, a previously manual process.
-    \item Developed internal tooling to automate routine dev tasks, viz. migration from Flywheel 1 to 2.0
+    \item Developed internal tooling to automate routine dev tasks, such as opening a pull request, verifying a story, deploying to production, or upgrading customer accounts to Flywheel 2.0
     \item Presented ``Lunch and Learns" on topics including: \\ History of Frontend; Phoenix on Elixir; Brendan's Peculiar Workstation.
-    \item Championed a dynamic, collaborative, and healthy culture by \\
-      * serving on culture comittee 
-      * 1-on-1 mentoring 
-      * piloting the #questions Slack channel
+    \item Championed a dynamic, collaborative, and healthy culture by
+      \begin{itemize}
+        \item serving on culture committee 
+        \item 1-on-1 mentoring 
+        \item piloting the #questions Slack channel
+      \end{itemize}
   }
   \technologies{
-    SQL (Postgres), Docker, Heroku, Ruby, Rails, React, Typescript, Scala, Cats,
-    TailwindCSS, Python, Bash, Go, Datadog, Terraform, Kubernetes
+    PostgreSQL, Docker, Heroku, Ruby, Rails, React, Typescript, Scala, Cats,
+    TailwindCSS, Python, Bash, Golang, Datadog, Terraform, Kubernetes, AWS, 
+    Elasticsearch, Logstash, Kibana
   }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -178,8 +186,9 @@ Employed as an engineer; self-identify as a maker.
         \item Built an improved CLI and GUI to access the firm's proprietary data backend
     }
 
-    \textbf{Technologies} \\
-    Java, Spring, Node/AngularJS, TestNG, OpenStack, AWS, Chef, Gatling, Upsource, REST, Literate CoffeeScript, Jenkins, TeamCity
+    \technologies{
+      Java, Spring, Node/AngularJS, TestNG, OpenStack, AWS, Chef, Gatling, Upsource, REST, Literate CoffeeScript, Jenkins, TeamCity
+    }
 
 
     \role
@@ -195,8 +204,9 @@ Employed as an engineer; self-identify as a maker.
         \item Shared 24/7 pager-duty rotation with a team of 2--4 developers
     }
 
-    \textbf{Technologies} \\
-    JavaScript, jQuery , Spring , Java , Hibernate , Ruby, Rails , InnoDB , Brazil/Apollo
+    \technologies{
+      JavaScript, jQuery , Spring , Java , Hibernate , Ruby, Rails , InnoDB , Brazil/Apollo
+    }
 
     \role
       {Epic}
@@ -208,8 +218,9 @@ Employed as an engineer; self-identify as a maker.
     \impact{
         \item Prototyped and developed \textit{Haiku for Android}, Epic's mobile sidekick for physicians
     }
-    \textbf{Technologies} \\
-    Java, Android, ADK, M (MUMPS), C#/.NET, VB6, Chronicles
+    \technologies{
+      Java, Android, ADK, M (MUMPS), C#/.NET, VB6, Chronicles
+    }
 
 
 \end{resume}
