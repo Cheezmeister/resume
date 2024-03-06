@@ -9,5 +9,8 @@ all: $(TARGET)
 clean:
 	rm -f $(TARGET) $$(cat .gitignore)
 
-deploy: $(TARGET)
+commit: $(TARGET)
+	git commit --all && git push
+
+deploy: commit
 	git pull --rebase && git push && scp $(TARGET) $(SERVER):www/bml.rocks/resume/$(TARGET)
