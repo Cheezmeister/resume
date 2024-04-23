@@ -12,5 +12,5 @@ clean:
 commit: $(TARGET)
 	git commit --all && git push
 
-deploy: commit
-	git pull --rebase && git push && scp $(TARGET) $(SERVER):www/bml.rocks/resume/$(TARGET)
+deploy:
+	 scp $(TARGET) $(SERVER):www/bml.rocks/resume/$(TARGET)
