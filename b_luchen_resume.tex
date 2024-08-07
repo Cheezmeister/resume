@@ -1,13 +1,15 @@
 
 % This file uses the resume document class (res.cls)
 
-\documentclass[line,margin]{res}
+\documentclass[centered,margin]{res}
 \setlength{\textheight}{9.6in} % increase text height to fit on 1-page
 \linespread{1.2} % If space, stretch out and relax
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{setspace}
+\usepackage{graphicx}
+
 
 \newsectionwidth{0.8in}
 \resumewidth=7.2in
@@ -23,9 +25,9 @@
   \textit{This document lives at \textul{\href{http://resume.bml.rocks}{resume.bml.rocks}}}
 }
 
-\newcommand{\role}[4]{
+\newcommand{\role}[5]{
   \begin{tabularx}
-    \textbf{#1}   & \hfill \textbf{#2} \\
+    \textbf{#1} (\href{https://#5}{#5}) & \hfill \textbf{#2} \\
     \textit{#3}   & \hfill #4          \\
   \end{tabularx}
 }
@@ -79,8 +81,9 @@
 \urlstyle{sf}
 
 \name{\huge Brendan Luchen}
+% \name{\includegraphics[width=2cm, height=2cm]{logo.png} \huge Brendan Luchen}
 \address{
-  \texttt{brendan@\href{http://is.gd/bmlBio}{luchenlabs.com}} · \href{http://bml.rocks}{www.bml.rocks}
+  \texttt{brendan@\href{http://is.gd/bmlBio}{luchenlabs.com}} | \href{http://bml.rocks}{www.bml.rocks} | \href{https://linkedin.com/in/Cheezmeister}{\textsl{linkedin.com/in/Cheezmeister}} | \href{http://is.gd/bmlGithub}{\textsl{github.com/Cheezmeister}}
 }
 
 
@@ -93,9 +96,6 @@
 
   \vspace{-0.40in}{
   \hfill
-  \href{https://linkedin.com/in/Cheezmeister}{\textsl{linkedin.com/in/Cheezmeister}}
-  ·
-  \href{http://is.gd/bmlGithub}{\textsl{github.com/Cheezmeister}}
 }
 
 \section{\sc Synopsis}
@@ -110,47 +110,55 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\sc Employer}
   \role
-    {Archipelago AI (archipelago-ai.com)}
+    {Archipelago AI}
     {Distributed Remote}
     {Founding Software Engineer, Full Stack}
     {April 2024--present}
+    {archipelago-ai.com}
   \employerSummary
-    {Work smarter, chat less}
+    {Work smarter, chat less.}
   \impact{
-    \item Currently bootstrapping the MVP of flagship product Fresnel
+    \item Integrated klogging to emit structured logs from the api server backend
+    \item Developed and verified the first end-to-end integration between frontend, backend, and database layer
+    \item Mentored grad student intern towards introducing Kotlin unit testing
   }
   \technologies{
-    Kotlin, Ktor, Klogging, Koin, SvelteKit, GitHub Actions, Docker, Dagger CI, Stytch, TiDB, Grafana, Ansible
+    Kotlin (Ktor, Klogging, Koin, jOOQ)
+    TypeScript (NodeJS, SvelteKit, TailwindCSS)
+    IaC (GitHub Actions, Ansible, Docker, Dagger CI)
+    MySQL (TiDB)
   }
 
 \section{\sc Prior Employers}
   \role
-    {BCNC (bcnc.net)}
+    {BCNC}
     {Boston, Massachusetts (Hybrid Remote)}
     {Technology Support Specialist}
     {September 2023--March 2024}
+    {bcnc.net}
+  \employerSummary {Adult Education and Workforce Initiatives.}
+  \impact{
+    \item Managed electronics inventory, offered live tech support, and streamlined IT operations
+    \item Supported the resolution of a ~\$13,000 disputed bill with T-Mobile
+  }
   \technologies{
     Squarespace, Zapier, Sharepoint, QR Codes
   }
 
   \role
-    {Teikametrics (teikametrics.com)}
+    {Teikametrics}
     {Boston, Massachusetts (Hybrid Remote)}
     {Software Engineer II (SE2)}
     {February 2019--January 2023}
+    {teikametrics.com}
   \employerSummary
-    {The AI-powered platform to optimize and grow your ecommerce business on Amazon \& Walmart.com}
+    {The AI-powered platform to optimize and grow your ecommerce business on Walmart \& Amazon.}
   \impact{
-    \item Delivered a billing backend, enabling some \$25k of MRR to be automatically invoiced and charged
-    \item Developed internal tooling to automate routine SDLC chores
+    \item Introduced i18n to the React frontend
+    \item Delivered a billing backend enabling some \$25k of MRR to be automatically invoiced and charged
     \item Launched a documentation system for Flywheel's event-driven architecture, leveraging AsyncAPI
-    \item As a guest on the international DevOps team, designed and implemented a scalable and secure cloud-based microservice-logging system, with turnkey installation for dev teams
-    \item{Championed a dynamic, collaborative, and healthy culture by:
-      \begin{itemize}
-        \item Serving on culture steering committee 
-        \item Mentoring junior developers
-        \item Piloting the Slack channel \texttt{\#questions}, a safe place to ask who/where/how to ask
-      \end{itemize}
+    \item Designed and implemented a scalable and secure cloud-based microservice-logging system
+    \item{Championed a dynamic, collaborative, safe, and healthy culture
     }
   }
   \technologies{
@@ -167,14 +175,18 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
 
 
 \section{\sc Shipped Software}
-    \textbf{\href{https://is.gd/chromaReview}{\underline{Chromathud}}}: Educational puzzle game for PC and Xbox Live Indie Games \\
-    % \textbf{\href{http://ocjb.me}{\underline{OverClocked Jukebox}}}: Web jukebox for videogame arrangements from \texttt{ocremix.org} \\
-    \textbf{\href{https://github.com/Cheezmeister/www.ocjb.me}{\underline{OverClocked Jukebox}}}: Web jukebox for videogame arrangements from \texttt{ocremix.org} \\
-    \textbf{Modern Warfare 3}: Multiplatform first-person shooter (\copyright\ Activision) \\
-    \textbf{Haiku for Android}: Thin client to Epic's electronic medical record (\copyright\ Epic) \\
+    \textbf{\href{https://is.gd/chromaReview}{\underline{Chromathud}}}: Educational puzzle game for PC and Xbox Live Indie Games [ \CS/.NET/XNA ] \\
+    \textbf{\href{http://ocjb.me}{\underline{OverClocked Jukebox}}}: Web jukebox for VGM arrangements from \texttt{ocremix.org} [ Elixir/Phoenix/JS ] \\
+    % \textbf{\href{https://github.com/Cheezmeister/www.ocjb.me}{\underline{OverClocked Jukebox}}}: Web jukebox for videogame arrangements from \texttt{ocremix.org} \\
+    \textbf{Modern Warfare 3 (2011)}: Multiplatform console/PC FPS game (\copyright\ Activision) [ C++/idtech3 ] \\
+    \textbf{Haiku for Android}: Thin client to Epic's EMR (\copyright\ Epic Systems Corporation) \\
     \textbf{Teikametrics Flywheel}: The eCommerce Seller's Operating System (\copyright\ Teikametrics) \\
 
-
+% \section{\sc Publications}
+%     \textbf{Lorem Ipsum dolor sit amet} \\
+%     \textbf{Lorem Ipsum dolor sit amet} \\
+%
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -186,6 +198,7 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
       {Seattle, Washington (Hybrid Remote)}
       {Software Engineer}
       {April 2017--August 2018}
+      {mitratech.com}
     \employerSummary
       {Reviewsnap and Trakstar are mature and well-tuned performance appraisal and management systems.}
     \impact{
@@ -201,11 +214,12 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
       {Seattle, Washington}
       {Software Development Engineer in Test (SDET)}
       {August 2014--November 2016}
+      {theplatform.com}
     \employerSummary
     {
       Comcast Technology Solutions 
-      (nee ``\href{https://en.wikipedia.org/wiki/ThePlatform}{\textit{thePlatform}}'')
-      designs custom solutions for digital media companies to manage and publish video and audio.
+      (formerly ``\href{https://en.wikipedia.org/wiki/ThePlatform}{\textit{thePlatform}}'')
+      delivers a media management and publishing platform to distribute video and other digital content.
     }
     \impact{
         \item Verified code end-to-end allowing Comcast subscribers on Apple TV to login with their Apple ID
@@ -221,11 +235,13 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
       {Seattle, Washington}
       {Software Development Engineer (SDE)}
       {June 2013--February 2014}
+      {amazon.com}
     \employerSummary
       {Wihin the Platform Excellence org, the Fatals team is tasked 
        with bringing customer-facing failures ever closer to zero.}
     \impact{
-        \item Drove company-wide initiatives to reduce HTTP 5xx and other failures, while sharing a 24/7 pager-duty rotation one out of every 3 weeks
+        \item Drove company-wide initiatives to reduce HTTP 5xx and other failures
+        \item Shared a 24/7 pager-duty rotation one out of every 3 weeks
     }
 
     \technologies{
@@ -237,6 +253,7 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
       {Madison, Wisconsin}
       {Software Developer}
       {September 2011--March 2013}
+      {epic.com}
     \employerSummary
       {Epic Chronicles is the leading electronic medical record in the US, emphasizing an integrated patient record and continuity of healthcare across providers and time. Its user-facing frontends include Hyperspace, Canto, Haiku, and MyChart.}
     \impact{
