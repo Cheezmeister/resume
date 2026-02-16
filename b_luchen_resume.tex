@@ -19,15 +19,20 @@
 \newcommand{\CS}{C\texttt{\#}}
 \newcommand{\timestamp}{\the\year-\ifnum\month<10 0\fi\the\month-\ifnum\day<10 0\fi\the\day }
 
+\newcommand{\link}[2]{
+  \href{#1}{\texttt \textul{#2}}
+}
+
 \newcommand{\footer}{
+  % \hfill \textit{\small References are available upon request.}
   \vfill
-  \textit{Handcrafted with \heartsuit + \LaTeX (\href{https://github.com/Cheezmeister/resume/raw/master/b_luchen_resume.tex}{View\ Source})}.
-  \textit{This document lives at \textul{\href{http://resume.bml.rocks}{resume.bml.rocks}}}
+  Handcrafted with \heartsuit + \link{https://github.com/Cheezmeister/resume/raw/master/b_luchen_resume.tex}{\LaTeX}
+  \hfill \textit{This document lives at \link{http://resume.bml.rocks}{resume.bml.rocks} | created \timestamp }
 }
 
 \newcommand{\role}[5]{
   \begin{tabularx}
-    \textbf{#1} (\href{https://#5}{#5}) & \hfill \textbf{#2} \\
+    \textbf{#1} (\link{https://#5}{#5}) & \hfill \textbf{#2} \\
     \textit{#3}   & \hfill #4          \\
   \end{tabularx}
 }
@@ -83,7 +88,11 @@
 \name{\huge Brendan Luchen}
 % \name{\includegraphics[width=2cm, height=2cm]{logo.png} \huge Brendan Luchen}
 \address{
-  \texttt{brendan@\href{http://is.gd/bmlBio}{luchenlabs.com}} | \href{http://bml.rocks}{www.bml.rocks} | \href{https://linkedin.com/in/Cheezmeister}{\textsl{linkedin.com/in/Cheezmeister}} | \href{http://is.gd/bmlGithub}{\textsl{github.com/Cheezmeister}}
+  \texttt{brendan@\href{http://is.gd/bmlBio}{luchenlabs.com}} 
+  \textperiodcentered \href{http://bml.rocks}{www.bml.rocks}
+  |
+  \href{https://linkedin.com/in/Cheezmeister}{linkedin.com/in/Cheezmeister}
+  \textperiodcentered \href{http://is.gd/bmlGithub}{github.com/Cheezmeister}
 }
 
 
@@ -110,6 +119,14 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\sc Employer}
   \role
+    {John Turner Consulting} {Portsmouth, NH}
+    {Asphalt Technician} {August 2024--present}
+    {consultjtc.com}
+  \employerSummary {Strategic Engineering Solutions that Exceed Expectations}
+
+\section{\sc Prior Employers}
+
+  \role
     {Archipelago AI}
     {Distributed Remote}
     {Founding Software Engineer, Full Stack}
@@ -132,7 +149,6 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
     MySQL (TiDB)
   }
 
-\section{\sc Prior Employers}
   \role
     {BCNC}
     {Boston, Massachusetts (Hybrid Remote)}
@@ -176,17 +192,7 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
     % Greater fluency in Jira; comfort in building and using peripheral infrastructure (logging,
     % monitors, alerts, dashboards, documentation); fostering a culture of discipline and ownership.
 
-
-\section{\sc Shipped Software}
-    \textbf{\href{http://ocjb.me}{\underline{OverClocked Jukebox}}}: Web jukebox for VGM arrangements from \texttt{ocremix.org} [ Elixir/Phoenix/JS ] \\
-    \textbf{\href{https://cheezmeister.itch.io/vec}{\underline{Vec (2015)}}}: Procedural arcade game Windows/Mac/Linux [ C++/SDL/OpenGL ] \\
-    \textbf{\href{https://is.gd/chromaReview}{\underline{Chromathud (2013)}}}: Educational puzzle game for PC and Xbox Live Indie Games [ \CS/.NET/XNA ] \\
-    % \textbf{\href{https://github.com/Cheezmeister/www.ocjb.me}{\underline{OverClocked Jukebox}}}: Web jukebox for videogame arrangements from \texttt{ocremix.org} \\
-    \textbf{Modern Warfare 3 (2011)}: Multiplatform console/PC FPS game (\copyright\ Activision) [ C++/idtech3 ] \\
-    \textbf{Haiku for Android}: Thin client to Epic's EMR (\copyright\ Epic Systems Corporation) [ Java/Android/\CS ] \\
-    \textbf{Flywheel}: The eCommerce Seller's Operating System (\copyright\ Teikametrics) [ TypeScript/Python/Postgres] \\
-
-
+\footer
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -238,7 +244,7 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
       {June 2013--February 2014}
       {amazon.com}
     \employerSummary
-      {Wihin the Platform Excellence org, the Fatals team is tasked 
+      {The Platform Excellence in Fatals team is tasked 
        with bringing customer-facing failures ever closer to zero.}
     \impact{
         \item Drove company-wide initiatives to reduce HTTP 5xx and other failures
@@ -264,6 +270,30 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
     \technologies{
       Java, Android, ADK, M (MUMPS), \CS/.NET, VB6, Chronicles
     }
+
+    \role {Activision} {Portland, Maine}
+    {Programmer Intern} {June 2011--September 2011}
+    {activision.com}
+
+    \role {IBM} {Durham, North Carolina}
+    {Software Engineering Co-op} {March 2009-September 2009}
+    {ibm.com}
+
+\footer
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{\sc Shipped Software}
+    \textbf{\href{http://ocjb.me}{\underline{OverClocked Jukebox}}}: Web jukebox for VGM arrangements from \texttt{ocremix.org} [ Elixir/Phoenix/JS ] \\
+    \textbf{\href{https://cheezmeister.itch.io/vec}{\underline{Vec (2015)}}}: Procedural arcade game Windows/Mac/Linux [ C++/SDL/OpenGL ] \\
+    \textbf{\href{https://is.gd/chromaReview}{\underline{Chromathud (2013)}}}: Educational puzzle game for PC and Xbox Live Indie Games [ \CS/.NET/XNA ] \\
+    % \textbf{\href{https://github.com/Cheezmeister/www.ocjb.me}{\underline{OverClocked Jukebox}}}: Web jukebox for videogame arrangements from \texttt{ocremix.org} \\
+    \textbf{Modern Warfare 3 (2011)}: Multiplatform console/PC FPS game (\copyright\ Activision) [ C++/idtech3 ] \\
+    \textbf{Haiku for Android}: Thin client to Epic's EMR (\copyright\ Epic Systems Corporation) [ Java/Android/\CS ] \\
+    \textbf{Flywheel}: The eCommerce Seller's Operating System (\copyright\ Teikametrics) [ TypeScript/Python/Postgres] \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
