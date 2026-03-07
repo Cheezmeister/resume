@@ -22,9 +22,9 @@ jobs:
         path: ~/.local/share/mise
         key: "mise-${{ runner.os }}-${{ hashFiles('.tool-versions', 'mise.toml') }}"
     - name: Install mise
-      uses: mise-en-place/setup-mise@v1
+      uses: jdx/mise-action@v3
       with:
-        mise-version: 'latest-stable'
+        version: 'latest-stable'
     - name: Install Typst et. al.
       run: mise install
     - name: Build PDF
