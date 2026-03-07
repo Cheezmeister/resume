@@ -15,7 +15,7 @@
     #h(1fr) #sym.ast.triple #h(1fr)
     Created on #datetime.today().display()
     #h(1fr) #sym.ast.triple #h(1fr)
-    This document lives at #link("resume.bml.rocks")
+    This document lives at #link("http://resume.bml.rocks")
   ]
 )
 
@@ -35,24 +35,30 @@
 
 
 #align(center + top)[
-  #grid(columns: (3em, 1fr, 3em), gutter: 2em, image("logo.png", width: 3em), [
+  #grid(columns: (2fr, 3fr, 2fr), gutter: 2em, [
+    #image("logo.png", width: 4em)
+  ], [
     #title[
       #sym.floral.l
       Brendan M Luchen
       #sym.floral.r
     ]
     Senior Full-Stack Engineer
-  ], image("fourier.jpg"))
+  ], align(right + top)[
+      #link("mailto:brendan@luchenlabs.com") #emoji.mail \
+      // #link("geo:42.6334,-71.3162?u=1000&q=Lowell")[Lowell, MA] #emoji.pin.round \
+      // #image("fourier.jpg", width: 4em)
+  ])
 ]
 
 #line(length: 100%)
 
 #text(font: "New Computer Modern")[
 #horiline((
-    link("mailto:brendan@luchenlabs.com")[`brendan@luchenlabs.com`],
-    link("www.bml.rocks")[`www.bml.rocks`],
-    link("cheezmeister.github.io")[`cheezmeister.github.io`],
-    link("linkedin.com/in/Cheezmeister")[`linkedin.com/in/Cheezmeister`],
+    link("https://www.luchenlabs.com")[`www.luchenlabs.com`],
+    link("https://www.bml.rocks")[`www.bml.rocks`],
+    link("https://cheezmeister.github.io")[`cheezmeister.github.io`],
+    link("https://linkedin.com/in/Cheezmeister")[`linkedin.com/in/Cheezmeister`],
   ), separator: sym.diamond.stroked.dot)
 ]
 
@@ -91,7 +97,7 @@ Proven track record of positivity, collaboration, interdisciplinary and cross-fu
   )
 }
 
-#role("John Turner Consulting", "consultjtc.com", "Portsmouth, NH", "Asphalt Technician", "August 2024–present")
+#role("John Turner Consulting", "consultjtc.com", "Portsmouth, NH", "Asphalt Plant Technician", "August 2024–present")
 #employer-summary("Strategic Engineering Solutions that Exceed Expectations")
 
 = Prior Employers
