@@ -65,8 +65,7 @@
 = Synopsis
 Versatile and motivated Full-Stack Engineer with Frontend and DevOps capability. \
 10+ years of experience building, fixing, and scaling web applications. \
-Deep understanding of the SDLC, Agile/Scrum methodologies, UX, DX, and techdebt management. \
-Proven track record of positivity, collaboration, interdisciplinary and cross-functional innovation.
+Equally comfortable owning features cradle-to-grave or pairing on a week-old heisenbug. \
 
 = Employer
 #let role(employer, url, location, title, dates) = {
